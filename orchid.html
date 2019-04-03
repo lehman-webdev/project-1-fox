@@ -1,12 +1,93 @@
 <!DOCTYPE html>
-
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <nav>
-            <a href="homePage.html">Home</a>
-            <a href="orchid.html">Orchid Show</a>
-            <a href="membership.html">Membership</a>
-        </nav>
-    </head>
+<head><!--head tag is where all non-displayed information goes-->
+<title>The Orchid Show at the New York Botanical Garden</title>
+<!--<link rel="stylesheet" type="text/css" href="style.css">-->
+<!--Will move css from here to stylesheet-->
+<style>
+
+body, html{
+  height: 100%;
+}
+
+/*This is the css for creating the big background image we disscused.*/
+.BigBackdrop{
+  background: #ac04fa; /* if image cant be viewed, color will be displayed instead */
+  background: linear-gradient(
+    to top, rgba(0, 0, 0, .5), rgba(0, 0, 0, 100)
+    ),url("https://allhdwallpapers.com/wp-content/uploads/2015/07/Lotus-10.jpg");
+  min-height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Overlay title ontop of BigBackdrop Image*/
+.frontpage{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  color: olive;
+
+}
+
+.footer{position: relative;
+    height: 5em;
+    line-height: 5em;
+    margin: 0;
+    background: #39454b;
+    color:#999;
+    color: rgba(185, 186, 187, 0.5);
+    overflow: hidden;
+  }
+
+  #aboutTheShow{
+    height: 750px;
+    background-color: olive;
+  }
+
+  #Photos{
+    height: 750px;
+    background-color: beige;
+  }
+
+
+</style>
+</head>
+
+<!-- body will hold majority of content for the page-->
+<body>
+
+    <nav>
+      <a href="homePage.html">Home</a>
+      <a href="orchid.html">Orchid Show</a>
+      <a href="membership.html">Membership</a>
+    </nav>
+
+
+    <div class="BigBackdrop">
+        <div class="frontpage" style="font-size:65px;">The Orchid Show<br>
+          <span style="font-size:50px;">At the New York Botanical Garden</span></div>
+    </div>
+
+
+    <section id="aboutTheShow">
+
+    </section>
+
+    <section id="Photos">
+
+    </section>
+
+
+
+
+</body>
+
+<footer class="footer">
+
+</footer>
+
 </html>

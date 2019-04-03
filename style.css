@@ -1,0 +1,25 @@
+.homeBackgroundGIF{
+  background-image: url('images/plantLove.png');
+  min-height: 100%;
+}
+
+.textCenter{
+  width:50%;
+  margin: auto;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;  
+  text-align:left;
+} 
+
+th, td{
+  height: 50px;
+  border-bottom: 1px solid #ddd;
+}
+
+footer {
+  background: linear-gradient(to bottom, rgba(248,255,232,1) 0%,rgba(227,245,171,1) 33%,rgba(183,223,45,1) 100%);
+}

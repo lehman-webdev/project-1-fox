@@ -1,0 +1,108 @@
+/*style for the whole nav bar*/
+nav{
+  position: fixed;
+  left: 10px;
+}
+
+/*style for each option in the nav*/
+nav a{
+  float: left;
+  text-decoration: none;
+  padding: 14px 16px;
+  color: #FFF;
+  background-color: #333;
+  border-right: solid #bbb;
+  border-left: solid #bbb;
+} 
+
+/*change color when hovering over an option in the nav bar*/
+nav a:hover {
+  background-color: #999;
+}
+
+/*change background color of option in nav bar where the user is currently at*/
+.active {
+  background-color: #4CAF50;
+}
+
+/*style for the background image. this has to cover the whole page*/
+.bgImg{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width:100%;
+  height:620px;
+}
+
+/*style for the logo. this has to be centered on the background image and a large font size*/
+.logo{
+  position: absolute;
+  bottom:10%;
+  left:40%;
+  color: #000;
+  font-size: 70px;
+  /*text shadow used for easier reading*/
+  text-shadow: #FFF 1px 1px 2px;
+}
+
+/* used to center the topic of the page below the image*/
+.bodyTop{
+  text-align: center;
+}
+
+
+/*style for the plantlove icon with a clickable link shown in html*/
+.plantLove{
+  background: linear-gradient(to bottom, rgba(169,219,128,1) 0%,rgba(150,197,111,1) 100%);
+  margin: 0px;
+  color: white;
+  text-decoration:none;
+  /*display used to only apply the background color where text is and not the whole block*/
+  display: inline-block;
+  font-family: arial;
+}
+
+/*a quick class that will fix margin problems when writing the body*/
+.marginFix{
+  margin-top: 0px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+/*style for the whole table in membership*/
+table {
+  width: 400;
+  border-collapse: collapse;  
+  text-align:left;
+} 
+
+/*style for each row in the tables*/
+th, td{
+  height: 50px;
+  border-bottom: 1px solid #ddd;
+}
+
+/*style for the whole body*/
+body{
+  font-size:1.2em;
+  height: 50%;
+  margin: 0;
+  background: linear-gradient(to bottom, rgba(249,252,247,1) 0%,rgba(245,249,240,1) 100%);
+}
+
+/*style for the whole footer*/
+footer {
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+}
+
+/*style for the text in footer*/
+.generalInfo{
+  color:white;
+  font-size: .9em;
+  font-family:arial;
+  text-align:center;
+  margin: 40px;
+  /*padding used to seperate the body from the footer to have text more south*/
+  padding-top: 10px;
+}

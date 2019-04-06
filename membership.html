@@ -1,113 +1,167 @@
 <!DOCTYPE html>
-
 <html>
-<title>Membership</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Membership</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<!-- header will contain the nav bar-->
+<header>
     <nav>
         <a href="homePage.html">Home</a>
         <a href="orchid.html">Orchid Show</a>
-        <a href="membership.html">Membership</a>
+        <a href="membership.html" class="active">Membership</a>
+        <a href="about.html">About</a>
     </nav>
-    <h1 class="textCenter">NYBG</h1>
-</head>
+</header>
 
 <body>
-    <div class="textCenter">Membership</div>
-    <table>
-        <thead>
-            <tr>
-                <th>Type</th>
-                <th>Price</th>
-                <th>Unlimited Admission</th>
-                <th>Parking Passes</th>
-                <th>Guess Passes</th>
-                <th>Early Morning Grounds Access</th>
-                <th>Sturdy, reusable NYBG tote bag</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Individual</td>
-                <td>$85</td>
-                <td>1 adult</td>
-                <td>4</td>
-                <td>2</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>Dual</td>
-                <td>$110</td>
-                <td>2 adults</td>
-                <td>6</td>
-                <td>2</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>Family</td>
-                <td>$135</td>
-                <td>2 adults & up to 5 children</td>
-                <td>8</td>
-                <td>4</td>
-                <td>-</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>Supporting</td>
-                <td>$275</td>
-                <td>2 adults & up to 5 children</td>
-                <td>Unlimited</td>
-                <td>8</td>
-                <td>Yes</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>Contributing</td>
-                <td>$600</td>
-                <td>4 adults & up to 5 children</td>
-                <td>Unlimited</td>
-                <td>10</td>
-                <td>Yes</td>
-                <td>Yes</td>
-            </tr>
-            <tr>
-                <td>Sustaining</td>
-                <td>$1,000</td>
-                <td>4 adults & up to 5 children</td>
-                <td>Unlimited</td>
-                <td>14</td>
-                <td>Yes</td>
-                <td>Yes</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td>Garden Patrons Program</td>
-                <td>$1,500 & above</td>
-                <td colspan="5">Garden Patrons receive exclusive access to NYBG's curators, scientists,
-                    educators, and horticulturists, and enjoy a unique insider's view of one of the world'
-                    most celebrated gardens. Visit <a href="nybg.org/patrons">nybg.org/patrons</a> for
-                    more information.
-                </td>
-        </tfoot>
-        </tr>
-    </table>
+    <!--this div will contain the logo which is just the text NYBG, with the img-->
+    <div>
+        <h1 class="logo">NYBG</h1>
+        <img src="images/membershipHeader.jpg" alt="Orchid Show arches" class="bgImg">
+    </div>
 
-    <ul>
-        <li>Some special events may be excluded.</li>
-        <li>They make every effort to accomidate their members, but parking is first-come, first-served, and is not
-            guarenteed.</li>
-        <li>Sustaining members also recieve exclusive invitations to events with curatioral staff, exhibition openings,
-            galas, and lectures.</li>
-    </ul>
+    <!--this div contains the #plantlove link that will forward users to the official website-->
+    <div style="text-align:right;">
+        <a href="https://www.nybg.org/about/plantlove/" target="_blank">
+            <h1 class="plantLove">#plantlove</h1>
+        </a>
+    </div>
+
+    <!--this div will contain the whole body text including the table-->
+    <div class="marginFix">
+
+        <!--this div will contain the first text of the body. either home, orchid, or membership-->
+        <div>
+            <h1 class="bodyTop">Membership at the garden</h1>
+        </div>
+
+        <!-- general info about memberships of the garden-->
+        <p>With something new to discover in every season, you'll want to visit again and again.
+            Join today and receive free admission-plus exclusive Member benefits-for an entire year.
+            That way you can escape to our urban oasis anytime...whatever the season or reason.</font>
+        </p>
+        <p>Members also receive guest passes, parking passes, discounts at the NYBG Shop and on education
+            programs, and more. Enjoy all our wonderful programs, and receive invitations to special
+            Members-Only Previews, trips, tours, and events. Plus, your Membership travels with you with
+            reciprocal benefits at more than 200 gardens and arboreta nationwide, all while supporting
+            NYBG's efforts in science, education, and horticulture that impact communities locally and
+            around the world.
+        </p>
+
+        <!-- this table is used to show users what type of membership is available-->
+        <table>
+            <thead>
+                <!--type of membership-->
+                <tr>
+                    <!--create row-->
+                    <th>Type</th>
+                    <th>Price</th>
+                    <th>Unlimited Admission</th>
+                    <th>Parking Passes</th>
+                    <th>Guess Passes</th>
+                    <th>Early Morning Grounds Access</th>
+                    <th>Sturdy, reusable NYBG tote bag</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Individual</td>
+                    <td>$85</td>
+                    <td>1 adult</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Dual</td>
+                    <td>$110</td>
+                    <td>2 adults</td>
+                    <td>6</td>
+                    <td>2</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Family</td>
+                    <td>$135</td>
+                    <td>2 adults & up to 5 children</td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Supporting</td>
+                    <td>$275</td>
+                    <td>2 adults & up to 5 children</td>
+                    <td>Unlimited</td>
+                    <td>8</td>
+                    <td>Yes</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Contributing</td>
+                    <td>$600</td>
+                    <td>4 adults & up to 5 children</td>
+                    <td>Unlimited</td>
+                    <td>10</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+                <tr>
+                    <td>Sustaining</td>
+                    <td>$1,000</td>
+                    <td>4 adults & up to 5 children</td>
+                    <td>Unlimited</td>
+                    <td>14</td>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Garden Patrons Program</td>
+                    <td>$1,500 & above</td>
+                    <!-- this value holds 5 rows with colspan = 5-->
+                    <td colspan="5">Garden Patrons receive exclusive access to NYBG's curators, scientists,
+                        educators, and horticulturists, and enjoy a unique insider's view of one of the world's
+                        most celebrated gardens. Visit
+                        <a href="https://www.nybg.org/join-support/garden-patrons/" target="_blank">
+                            nybg.org/patrons</a> for more information.
+                    </td>
+            </tfoot>
+            </tr>
+        </table>
+
+        <!--bullet point lists of extra info on memberships-->
+        <ul>
+            <li>Some special events may be excluded.</li>
+            <li>They make every effort to accomidate their members, but parking is first-come, first-served, and is
+                not
+                guarenteed.</li>
+            <li>Sustaining members also recieve exclusive invitations to events with curatioral staff, exhibition
+                openings,
+                galas, and lectures.</li>
+        </ul>
+    </div>
 </body>
+
+<!-- footer contains contact info and address of NYBG-->
 <footer>
 
+    <!--this div contains the text-->
+    <div class="generalInfo">
+        <h2>Location</h2>
+        <h5>2900 Southern Boulevard, Bronx, NY 10458-5126</h5>
+        <h2>General Info</h2>
+        <h5>Call: 718.817.8700</h5>
+    </div>
 </footer>
 
 </html>

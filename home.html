@@ -1,0 +1,51 @@
+<!--mission: use the JSON from the 2012 NYC SAT Scores to return that schools info-->
+<!--By Emmanuel, Bryan, Tahara, Mensur-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--our project will use bootstrap for our basic styling needs-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+
+        select {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+    <title>2012 NYC SAT Scores</title>
+</head>
+
+<body>
+    <!--"app" is used to activate vue on this div-->
+    <div class="container" id="app">
+        <div class="row-fluid">
+            <h2 class="text-center">2012 NYC SAT Scores</h2>
+        </div>
+        <div class="row-fluid">
+            <h5>Select a NYC high school</h5>
+        </div>
+        <div class="row-fluid">
+            <!--the 3 lines of code below this is used to make a drop down menu containing the list of all NYC high schools-->
+            <select class="selectpicker" data-show-subtext="true" data-live-search="true">
+                <!--loop the array containing the JSON using "v-for"-->
+                <option v-for="schoolinfo in info"> {{ schoolinfo.school_name }}</option>
+            </select>
+        </div>
+    </div>
+
+    <!--code below is used to activate vue-->
+    <script src="https://unpkg.com/vue"></script>
+    <!--code below used to activate ajax to get the JSON/API-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--code below used to connect this HTML to the Javascript-->
+    <script src="main.js"></script>
+</body>
+
+</html>

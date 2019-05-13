@@ -55,9 +55,28 @@ new Vue({   //the heart of vue
     },
 });
 
-/*KNOWN BUGS
-when user clicks submit in succession, the text repeats
-the boroughs were sometimes incorrect. however, this may be fixed with the addition of the "else ifs" rather than just if
--FIXED: Added code that empties the element "school_name" in array "specific_school". this makes it so that the dbn is filled in new every time rather than using school_name to find the borough
-***
-*/
+//the code below is for changing the background and font color
+function change_light(){
+    //save the body ID into element
+    var element = document.getElementById("body");
+    //if the ID's class list exists ...
+    if(element.classList){
+        //add white text and dark background
+        element.classList.toggle("text-white");
+        element.classList.toggle("bg-dark");
+    }
+    //if the IDs class does not exist...
+    else{
+        //save the class elements into classes split
+        var classes=element.className.split("text-dark");
+        var i = classes.indexOf("text-white", "bg-dark");
+        //if the class elements exist...
+        if(i>=0){
+            classes.splice(i,1);
+        }
+        else{
+            classes.push("text-white","bg-dark");
+            element.className === classes.join("test-dark");
+        }
+    }
+}

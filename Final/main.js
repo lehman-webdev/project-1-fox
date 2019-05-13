@@ -17,7 +17,7 @@ new Vue({   //the heart of vue
         save_school_name: function () {
             //below is used to extract what the user typed or when the user clicked submit and stores it into users_school
             var users_school = document.getElementById("user_input").value;
-			this.specific_school.school_name = "";
+            this.specific_school.school_name = "";
             //this for loop is used to search through the whole JSON
             for (var i = 0; i < this.array_schools.length; i++) {
                 // IF the user input matches any school from the list ....
@@ -54,12 +54,6 @@ new Vue({   //the heart of vue
         },
     },
 });
-
-
-function change_light(){
-    
-}
-
 
 /*KNOWN BUGS
 when user clicks submit in succession, the text repeats

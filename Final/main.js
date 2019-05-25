@@ -22,6 +22,22 @@ new Vue({   //the heart of vue
             for (var i = 0; i < this.array_schools.length; i++) {
                 // IF the user input matches any school from the list ....
                 if (this.array_schools[i].school_name === users_school) {
+                    var chart = new CanvasJS.Chart("chartContainer", {
+                        title:{
+                            text: "Scores"              
+                        },
+                        data: [              
+                        {
+                            type: "column",
+                            dataPoints: [
+                                { label: "Average Critical Reading Score",  y: this.specific_school.sat_critical_reading_avg_score  },
+                                { label: "Average Math Score", y: this.specific_school.sat_math_avg_score  },
+                                { label: "Average Writing Score", y: this.specific_school.sat_writing_avg_score  },
+                            ]
+                        }
+                        ]
+                    });
+                    chart.render();
                     //  record that specific array into a new object called specific_school
                     this.specific_school = this.array_schools[i];
                     //these if statements below is used to find what borough the school is from. the format from the json was like 01M123. these if statements find the M to determine the school is located in Manhattan.
@@ -46,36 +62,36 @@ new Vue({   //the heart of vue
                     }
                     //the code below is used to add additional text infront of the elements of the array for context
                     this.specific_school.num_of_sat_test_takers += " students took the SAT.";
-                    this.specific_school.sat_critical_reading_avg_score += " was the average critical reading score.";
+                    
                     this.specific_school.sat_math_avg_score += " was the average math score.";
                     this.specific_school.sat_writing_avg_score += " was the average writing score.";
                 }
             }
         },
-    },
+    }
 });
 
 //the code below is for changing the background and font color
-function change_light(){
+function change_light() {
     //save the body ID into element
     var element = document.getElementById("body");
     //if the ID's class list exists ...
-    if(element.classList){
+    if (element.classList) {
         //add white text and dark background
         element.classList.toggle("text-white");
         element.classList.toggle("bg-dark");
     }
     //if the IDs class does not exist...
-    else{
+    else {
         //save the class elements into classes split
-        var classes=element.className.split("text-dark");
+        var classes = element.className.split("text-dark");
         var i = classes.indexOf("text-white", "bg-dark");
         //if the class elements exist...
-        if(i>=0){
-            classes.splice(i,1);
+        if (i >= 0) {
+            classes.splice(i, 1);
         }
-        else{
-            classes.push("text-white","bg-dark");
+        else {
+            classes.push("text-white", "bg-dark");
             element.className === classes.join("test-dark");
         }
     }
